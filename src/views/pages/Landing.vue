@@ -1,9 +1,6 @@
 <script setup>
-import { useLayout } from '@/layout/composables/layout';
 import { computed } from 'vue';
 import AppConfig from '@/layout/AppConfig.vue';
-
-const { layoutConfig } = useLayout();
 
 const smoothScroll = (id) => {
   document.querySelector(id).scrollIntoView({
@@ -12,7 +9,7 @@ const smoothScroll = (id) => {
 };
 
 const logoUrl = computed(() => {
-  return `layout/images/${layoutConfig.darkTheme.value ? 'logo-white' : 'logo-dark'}.svg`;
+  return `layout/images/jinggai_dark.svg`;
 });
 </script>
 
@@ -342,7 +339,7 @@ const logoUrl = computed(() => {
         <div class="grid justify-content-between">
           <div class="col-12 md:col-2" style="margin-top: -1.5rem">
             <a @click="smoothScroll('#home')" class="flex flex-wrap align-items-center justify-content-center md:justify-content-start md:mb-0 mb-3 cursor-pointer">
-              <img :src="logoUrl" alt="footer sections" width="50" height="50" class="mr-2" />
+              <img :src="logoUrl" alt="footer sections" width="70" height="70" class="mr-2" />
               <h4 class="font-medium text-3xl text-900">SAKAI</h4>
             </a>
           </div>

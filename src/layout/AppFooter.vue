@@ -1,19 +1,16 @@
 <script setup>
-import { useLayout } from '@/layout/composables/layout';
 import { computed } from 'vue';
 
-const { layoutConfig } = useLayout();
-
 const logoUrl = computed(() => {
-  return `layout/images/${layoutConfig.darkTheme.value ? 'logo-white' : 'logo-dark'}.svg`;
+  return `layout/images/jinggai_dark.svg`;
 });
 </script>
 
 <template>
   <div class="layout-footer">
-    <img :src="logoUrl" alt="Logo" height="20" class="mr-2" />
+    <img :src="logoUrl" alt="Logo" height="100" class="mr-2" />
     by
-    <span class="font-medium ml-2">PrimeVue</span>
+    <span class="font-medium ml-2">JINGGAI FRONTEND</span>
   </div>
 </template>
 <style lang="scss" scoped></style>
