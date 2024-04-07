@@ -80,6 +80,7 @@ onMounted(() => {
     </div>
 
     <div class="col-12">
+      {{ images }}
       <div class="card">
         <h5>Galleria</h5>
         <Galleria :value="images" :responsiveOptions="galleriaResponsiveOptions" :numVisible="7" :circular="true" containerStyle="max-width: 800px; margin: auto">

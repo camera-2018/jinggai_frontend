@@ -2,6 +2,7 @@
 import { ref, computed, onMounted, onBeforeUnmount } from 'vue';
 import { useLayout } from '@/layout/composables/layout';
 import { useRouter } from 'vue-router';
+import ping from '../views/ping.vue';
 
 const { onMenuToggle } = useLayout();
 
@@ -76,10 +77,11 @@ const isOutsideClicked = (event) => {
     </button>
 
     <div class="layout-topbar-menu" :class="topbarMenuClasses">
-      <button @click="onSettingsClick()" class="p-link layout-topbar-button">
+      <ping baseUrl="http://127.0.0.1:8000" />
+      <Button @click="onSettingsClick()" class="p-link layout-topbar-button" outlined>
         <i class="pi pi-cog"></i>
         <span>Docs</span>
-      </button>
+      </Button>
     </div>
   </div>
 </template>

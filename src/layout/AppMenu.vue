@@ -7,6 +7,17 @@ const model = ref([
   {
     label: 'Home',
     items: [{ label: 'Dashboard', icon: 'pi pi-fw pi-home', to: '/' }]
+  },
+  {
+    label: 'GitHub',
+    items: [
+      {
+        label: 'GitHub',
+        icon: 'pi pi-fw pi-github',
+        url: 'https://github.com/camera-2018/jinggai_frontend',
+        target: '_blank'
+      }
+    ]
   }
   // {
   //   label: 'UI Components',
@@ -176,12 +187,30 @@ const model = ref([
       <app-menu-item v-if="!item.separator" :item="item" :index="i"></app-menu-item>
       <!-- <li v-if="item.separator" class="menu-separator"></li> -->
     </template>
-    <!-- <li>
-      <a href="https://www.primefaces.org/primeblocks-vue/#/" target="_blank">
-        <img src="/layout/images/banner-primeblocks.png" alt="Prime Blocks" class="w-full mt-3" />
-      </a>
-    </li> -->
+    <li class="ads">
+      <div class="card middle-card">
+        <ul class="ads-list">
+          <li>井盖完好 - 井盖及井圈都无破损并且完好盖在井上</li>
+          <li>井盖破损 - 井盖外观出现裂缝、缺口、破洞等</li>
+          <li>井盖缺失 - 井盖丢失，井口暴露</li>
+          <li>井盖未盖（翘起） - 井盖发生倾斜、翘起、偏离井口没有覆盖完全，致使无法与井座严密闭合的情况</li>
+          <li>井圈问题 - 井圈存在破损而井盖完好</li>
+        </ul>
+      </div>
+    </li>
   </ul>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.ads {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.ads-list {
+  li {
+    padding: 5px;
+  }
+}
+</style>
