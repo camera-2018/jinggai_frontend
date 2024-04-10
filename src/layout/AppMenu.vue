@@ -5,8 +5,8 @@ import AppMenuItem from './AppMenuItem.vue';
 
 const model = ref([
   {
-    label: 'Home',
-    items: [{ label: 'Dashboard', icon: 'pi pi-fw pi-home', to: '/' }]
+    label: '主页',
+    items: [{ label: '主页', icon: 'pi pi-fw pi-home', to: '/' }]
   },
   {
     label: 'GitHub',
@@ -16,6 +16,16 @@ const model = ref([
         icon: 'pi pi-fw pi-github',
         url: 'https://github.com/camera-2018/jinggai_frontend',
         target: '_blank'
+      }
+    ]
+  },
+  {
+    label: '在线识别',
+    items: [
+      {
+        label: '在线识别',
+        icon: 'pi pi-fw pi-mobile',
+        to: '/uikit/online'
       }
     ]
   }
@@ -190,11 +200,11 @@ const model = ref([
     <li class="ads">
       <div class="card middle-card">
         <ul class="ads-list">
-          <li>井盖完好 - 井盖及井圈都无破损并且完好盖在井上</li>
-          <li>井盖破损 - 井盖外观出现裂缝、缺口、破洞等</li>
-          <li>井盖缺失 - 井盖丢失，井口暴露</li>
-          <li>井盖未盖（翘起） - 井盖发生倾斜、翘起、偏离井口没有覆盖完全，致使无法与井座严密闭合的情况</li>
-          <li>井圈问题 - 井圈存在破损而井盖完好</li>
+          <li><Tag severity="success" value="Good"></Tag> : 井盖及井圈都无破损并且完好盖在井上</li>
+          <li><Tag severity="secondary" value="Broke"></Tag> : 井盖外观出现裂缝、缺口、破洞等</li>
+          <li><Tag severity="danger" value="Lose"></Tag> : 井盖丢失，井口暴露</li>
+          <li><Tag severity="warning" value="Uncovered"></Tag> : 井盖发生倾斜、翘起、偏离井口没有覆盖完全，致使无法与井座严密闭合的情况</li>
+          <li><Tag severity="contrast" value="Circle"></Tag> : 井圈存在破损而井盖完好</li>
         </ul>
       </div>
     </li>

@@ -2,19 +2,13 @@
 import { ref, onMounted, onUnmounted } from 'vue';
 import axios from 'axios';
 
-const BASE_URL = defineProps({
-  baseUrl: {
-    type: String,
-    required: true
-  }
-});
 const delay = ref(0);
 const connected = ref(false);
 
 const pingBackend = async () => {
   try {
     const start = Date.now();
-    await axios.get(`${BASE_URL}/ping`);
+    await axios.get('http://127.0.0.1:8000/ping');
     const end = Date.now();
     delay.value = end - start;
     connected.value = true;

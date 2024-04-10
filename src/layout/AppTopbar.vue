@@ -65,7 +65,7 @@ const isOutsideClicked = (event) => {
   <div class="layout-topbar">
     <router-link to="/" class="layout-topbar-logo">
       <img :src="logoUrl" alt="logo" class="top_logo" />
-      <span>JINGGAI</span>
+      <span>安盖通 - 井盖隐患智能识别系统</span>
     </router-link>
 
     <button class="p-link layout-menu-button layout-topbar-button" @click="onMenuToggle()">
@@ -77,7 +77,7 @@ const isOutsideClicked = (event) => {
     </button>
 
     <div class="layout-topbar-menu" :class="topbarMenuClasses">
-      <ping baseUrl="http://127.0.0.1:8000" />
+      <ping />
       <Button @click="onSettingsClick()" class="p-link layout-topbar-button" outlined>
         <i class="pi pi-cog"></i>
         <span>Docs</span>

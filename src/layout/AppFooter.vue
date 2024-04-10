@@ -10,7 +10,7 @@ const logoUrl = computed(() => {
   <div class="layout-footer">
     <img :src="logoUrl" alt="Logo" height="100" class="mr-2" />
     by
-    <span class="font-medium ml-2">JINGGAI FRONTEND</span>
+    <span class="font-medium ml-2">安盖通 - 井盖隐患智能识别系统</span>
   </div>
 </template>
 <style lang="scss" scoped></style>
