@@ -8745,6 +8745,8 @@
     overflow: hidden;
     text-overflow: ellipsis;
     max-width: 100%;
+    font-weight: 600;
+    font-size: 1.5rem;
   }
 
   .p-steps-number {
@@ -8761,18 +8763,18 @@
     background: transparent;
     transition: box-shadow 0.2s;
     border-radius: 6px;
-    background: #ffffff;
     outline-color: transparent;
   }
   .p-steps .p-steps-item .p-menuitem-link .p-steps-number {
     color: #4b5563;
     border: 1px solid #f3f4f6;
     background: #ffffff;
-    min-width: 2rem;
-    height: 2rem;
+    min-width: 3rem;
+    height: 3rem;
     line-height: 2rem;
-    font-size: 1.143rem;
-    z-index: 1;
+    font-size: 1.543rem;
+    font-weight: 600;
+    z-index: 0;
     border-radius: 50%;
   }
   .p-steps .p-steps-item .p-menuitem-link .p-steps-title {

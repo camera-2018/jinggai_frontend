@@ -3,7 +3,7 @@ import { ref, onMounted, onUnmounted } from 'vue';
 import axios from 'axios';
 
 const delay = ref(0);
-const connected = ref(false);
+const connected = ref(true);
 
 const pingBackend = async () => {
   try {
@@ -18,15 +18,15 @@ const pingBackend = async () => {
   }
 };
 
-const intervalId = setInterval(pingBackend, 2000);
+// const intervalId = setInterval(pingBackend, 2000);
 
 onMounted(() => {
   pingBackend();
 });
 
-onUnmounted(() => {
-  clearInterval(intervalId);
-});
+// onUnmounted(() => {
+//   clearInterval(intervalId);
+// });
 </script>
 
 <template>
